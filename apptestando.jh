@@ -1,0 +1,26 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.myapp,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular
+  }
+  entities *
+}
+
+entity Cliente {
+	nome String
+}
+
+entity Cidade {
+	nome String
+    uf String
+}
+
+relationship OneToMany {
+  Cliente to Cidade
+}
+    
