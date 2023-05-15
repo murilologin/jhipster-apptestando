@@ -13,19 +13,9 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-  client:
-    enabled: false
-  instance:
-    appname: apptestando
-    instanceId: apptestando:${spring.application.instance-id:${random.value}}
-
 spring:
   application:
-    name: apptestando
-  cloud:
-    config:
-      enabled: false
+    name: myApp
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -43,13 +33,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: apptestando-task-
+      thread-name-prefix: my-app-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: apptestando-scheduling-
+      thread-name-prefix: my-app-scheduling-
       pool:
         size: 20
   thymeleaf:
@@ -66,9 +56,9 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
-    name: 'apptestandoApp'
+    name: 'myApp'
   mail:
-    from: apptestando@localhost.com
+    from: myApp@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender

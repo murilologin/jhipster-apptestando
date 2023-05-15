@@ -1,0 +1,27 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20230515112616",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cliente",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cliente",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "cidade",
+      "otherEntityRelationshipName": "cliente",
+      "relationshipName": "cidade",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
